@@ -1,0 +1,3 @@
+services:
+ current_time_service.timezone:
+   class: Drupal\custom_config_form\CurrentTimeService

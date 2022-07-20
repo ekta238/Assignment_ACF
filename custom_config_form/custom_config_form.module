@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Controls the visual building blocks a page is constructed with.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function custom_config_form_theme($existing, $type, $theme, $path) {
+  return [
+    'custom_current_time_date' => [
+      'variables' => [
+        'site_data_info' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * List of timezone .
+ */
+function list_of_timezones() {
+  $timezone = [
+    '' => 'select timezone',
+    'america-chicago' => 'America/Chicago',
+    'america-new_york' => 'America/New_York',
+    'asia-tokyo' => 'Asia/Tokyo',
+    'asia-dubai' => 'Asia/Dubai',
+    'asia-kolkata' => 'Asia/Kolkata',
+    'europe-amsterdam' => 'Europe/Amsterdam',
+    'europe-oslo' => 'Europe/Oslo',
+    'europe-london' => 'Europe/London',
+  ];
+  return $timezone;
+}
